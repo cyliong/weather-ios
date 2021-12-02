@@ -21,13 +21,21 @@
                                 <rect key="frame" x="0.0" y="88" width="390" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEk-v7-bUe">
+                                <rect key="frame" x="0.0" y="139" width="390" height="671"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PEk-v7-bUe" secondAttribute="bottom" id="2j9-xJ-qhs"/>
+                            <constraint firstItem="PEk-v7-bUe" firstAttribute="top" secondItem="GP8-Xm-F0z" secondAttribute="bottom" id="9EL-wI-4ep"/>
                             <constraint firstItem="GP8-Xm-F0z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GwD-to-HOW"/>
                             <constraint firstItem="GP8-Xm-F0z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a8Q-04-2q5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GP8-Xm-F0z" secondAttribute="trailing" id="fkZ-iS-UKk"/>
+                            <constraint firstItem="PEk-v7-bUe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hlc-ZS-faD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PEk-v7-bUe" secondAttribute="trailing" id="q7x-me-9yK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Weather" id="LX8-YW-pKx"/>
