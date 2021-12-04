@@ -23,7 +23,19 @@
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEk-v7-bUe">
                                 <rect key="frame" x="0.0" y="139" width="390" height="671"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No weather data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jt-73-VL1">
+                                        <rect key="frame" x="132.33333333333334" y="325" width="125.66666666666666" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="1jt-73-VL1" firstAttribute="centerY" secondItem="PEk-v7-bUe" secondAttribute="centerY" id="Hsa-HB-jdx"/>
+                                    <constraint firstItem="1jt-73-VL1" firstAttribute="centerX" secondItem="PEk-v7-bUe" secondAttribute="centerX" id="J30-WN-bmw"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
