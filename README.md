@@ -3,6 +3,6 @@
 More information will be provided when it is ready.*
 
 ## Requirements
-- Xcode 13.1 or higher
+- Xcode 13.2 or higher
 - iOS 10.0 or higher
 - Swift 5 or higher
