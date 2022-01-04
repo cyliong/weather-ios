@@ -7,5 +7,8 @@ class WeatherTests: XCTestCase {
 
     override func tearDownWithError() throws {
     }
+    
+    func testGetWeather() {
+    }
 
 }
