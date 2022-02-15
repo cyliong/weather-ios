@@ -11,8 +11,15 @@ class WeatherTests: XCTestCase {
     }
     
     func testGetWeather() {
-        let weather = weatherService.getWeather(cityName: "Singapore")
-        XCTAssertNotNil(weather)
+        let expectation = XCTestExpectation(description: "Get weather data")
+        
+        weatherService.getWeather(cityName: "Singapore") { weather in
+            XCTAssertNotNil(weather)
+            
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5)        
     }
 
 }
