@@ -1,3 +1,5 @@
+import Foundation
+
 class WeatherService {
     private static let apiKey = ""
     private static let serviceURL =
@@ -8,6 +10,10 @@ class WeatherService {
         completionHandler: @escaping (Weather?) -> Void
     ) {
         completionHandler(nil)
+    }
+    
+    private func getWeatherURL(cityName: String) -> URL? {
+        URL(string: "\(WeatherService.serviceURL)&q=\(cityName)")
     }
     
 }
