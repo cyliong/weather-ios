@@ -66,6 +66,7 @@
                     <navigationItem key="navigationItem" title="Weather" id="LX8-YW-pKx"/>
                     <connections>
                         <outlet property="emptyDataLabel" destination="1jt-73-VL1" id="H3j-vL-4nA"/>
+                        <outlet property="weatherStackView" destination="Flk-id-gYs" id="Zsl-r6-TaL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
