@@ -25,24 +25,29 @@
                                 <rect key="frame" x="0.0" y="139" width="390" height="671"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No weather data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jt-73-VL1">
-                                        <rect key="frame" x="132.33333333333334" y="325" width="125.66666666666666" height="21"/>
+                                        <rect key="frame" x="132.33333333333334" y="325.33333333333331" width="125.66666666666666" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singapore, SG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecj-V4-kTH">
-                                        <rect key="frame" x="140.66666666666666" y="325" width="109" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Flk-id-gYs">
+                                        <rect key="frame" x="140.66666666666666" y="325.33333333333331" width="109" height="20.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singapore, SG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecj-V4-kTH">
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Ecj-V4-kTH" firstAttribute="centerY" secondItem="PEk-v7-bUe" secondAttribute="centerY" id="5Oo-ie-9O6"/>
-                                    <constraint firstItem="Ecj-V4-kTH" firstAttribute="centerX" secondItem="PEk-v7-bUe" secondAttribute="centerX" id="903-1l-qFt"/>
                                     <constraint firstItem="1jt-73-VL1" firstAttribute="centerY" secondItem="PEk-v7-bUe" secondAttribute="centerY" id="Hsa-HB-jdx"/>
                                     <constraint firstItem="1jt-73-VL1" firstAttribute="centerX" secondItem="PEk-v7-bUe" secondAttribute="centerX" id="J30-WN-bmw"/>
+                                    <constraint firstItem="Flk-id-gYs" firstAttribute="centerY" secondItem="PEk-v7-bUe" secondAttribute="centerY" id="jpV-IL-acj"/>
+                                    <constraint firstItem="Flk-id-gYs" firstAttribute="centerX" secondItem="PEk-v7-bUe" secondAttribute="centerX" id="wgw-Eh-DVj"/>
                                 </constraints>
                             </view>
                         </subviews>
