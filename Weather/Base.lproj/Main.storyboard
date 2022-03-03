@@ -51,6 +51,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Weather" id="LX8-YW-pKx"/>
+                    <connections>
+                        <outlet property="emptyDataLabel" destination="1jt-73-VL1" id="H3j-vL-4nA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
