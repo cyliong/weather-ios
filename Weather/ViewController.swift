@@ -6,6 +6,7 @@ class ViewController: UIViewController {
     
     @IBOutlet private var weatherStackView: UIStackView!
     @IBOutlet private var cityLabel: UILabel!
+    @IBOutlet private var temperatureLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
