@@ -13,7 +13,10 @@ class WeatherService {
     }
     
     private func getWeatherURL(cityName: String) -> URL? {
-        URL(string: "\(WeatherService.serviceURL)&q=\(cityName)")
+        let encodedCityName = cityName.addingPercentEncoding(
+            withAllowedCharacters: .urlQueryAllowed
+        ) ?? ""
+        return URL(string: "\(WeatherService.serviceURL)&q=\(encodedCityName)")
     }
     
 }
