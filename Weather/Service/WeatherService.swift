@@ -9,7 +9,16 @@ class WeatherService {
         cityName: String,
         completionHandler: @escaping (Weather?) -> Void
     ) {
-        completionHandler(nil)
+        let url = getWeatherURL(cityName: cityName)!
+        let task = URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            print(String(decoding: data!, as: UTF8.self))
+            
+            // TODO: Parse JSON
+            
+            completionHandler(nil)
+        }
+        task.resume()
     }
     
     private func getWeatherURL(cityName: String) -> URL? {
