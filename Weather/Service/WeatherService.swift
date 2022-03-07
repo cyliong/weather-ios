@@ -19,15 +19,42 @@ class WeatherService {
                let httpResponse = response as? HTTPURLResponse,
                (200...299).contains(httpResponse.statusCode)
             {
-                // TODO: Parse JSON
-                print(String(decoding: data, as: UTF8.self))
-                weather = nil
+                weather = self.deserializeJSON(data: data)
             } else {
                 weather = nil
             }
             completionHandler(weather)
         }
         task.resume()
+    }
+    
+    private func deserializeJSON(data: Data) -> Weather? {
+        guard
+            let jsonDictionary = try? JSONSerialization.jsonObject(
+                with: data,
+                options: []
+            ) as? [String: Any],
+            let mainDictionary = jsonDictionary["main"] as? [String: Any],
+            let temperature = mainDictionary["temp"] as? Double,
+            let humidity = mainDictionary["humidity"] as? Int,
+            let weatherDictionary = (
+                jsonDictionary["weather"] as? [[String: Any]]
+            )?.first,
+            let condition = weatherDictionary["main"] as? String,
+            let city = jsonDictionary["name"] as? String,
+            let systemDictionary = jsonDictionary["sys"] as? [String: Any],
+            let countryCode = systemDictionary["country"] as? String
+        else {
+            return nil
+        }
+        
+        return Weather(
+            city: city,
+            countryCode: countryCode,
+            temperature: temperature,
+            humidity: humidity,
+            condition: condition
+        )
     }
     
     private func getWeatherURL(cityName: String) -> URL? {
