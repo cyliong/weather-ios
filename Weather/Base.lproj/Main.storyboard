@@ -87,6 +87,7 @@
                         <outlet property="conditionLabel" destination="4Zq-yv-d0a" id="2hL-No-Sh4"/>
                         <outlet property="emptyDataLabel" destination="1jt-73-VL1" id="H3j-vL-4nA"/>
                         <outlet property="humidityLabel" destination="WXc-Lj-Ctg" id="Dze-ix-dKq"/>
+                        <outlet property="searchBar" destination="GP8-Xm-F0z" id="kp8-1r-hkI"/>
                         <outlet property="temperatureLabel" destination="4JY-0I-5rL" id="qSP-ul-PJ4"/>
                         <outlet property="weatherStackView" destination="Flk-id-gYs" id="Zsl-r6-TaL"/>
                     </connections>

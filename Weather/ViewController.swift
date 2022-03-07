@@ -2,6 +2,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet private var searchBar: UISearchBar!
+    
     @IBOutlet private var emptyDataLabel: UILabel!
     
     @IBOutlet private var weatherStackView: UIStackView!
