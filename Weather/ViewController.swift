@@ -42,6 +42,15 @@ extension ViewController: UISearchBarDelegate {
             DispatchQueue.main.async {
                 if let weather = weather {
                     self.emptyDataLabel.isHidden = true
+                    
+                    self.weatherStackView.isHidden = false
+                    self.cityLabel.text = "\(weather.city), \(weather.countryCode)"
+                    self.temperatureLabel.text = String(
+                        format: "%.0f°C",
+                        weather.temperature.rounded()
+                    )
+                    self.conditionLabel.text = weather.condition
+                    self.humidityLabel.text = "Humidity: \(weather.humidity)%"
                 }
             }
         }
