@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        searchBar.delegate = self
     }
 
 }
@@ -24,6 +26,17 @@ class ViewController: UIViewController {
 extension ViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let city = searchBar.text ?? ""
+        guard city != "" else {
+            let alert = UIAlertController(
+                title: "",
+                message: "Please enter a city name.",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            return
+        }
         
     }
     
