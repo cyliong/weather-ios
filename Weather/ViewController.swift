@@ -51,6 +51,14 @@ extension ViewController: UISearchBarDelegate {
                     )
                     self.conditionLabel.text = weather.condition
                     self.humidityLabel.text = "Humidity: \(weather.humidity)%"
+                } else {
+                    let alert = UIAlertController(
+                        title: "Unable to load weather data",
+                        message: nil,
+                        preferredStyle: .alert
+                    )
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true)
                 }
             }
         }
