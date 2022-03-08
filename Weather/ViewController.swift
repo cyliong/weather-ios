@@ -62,6 +62,8 @@ extension ViewController: UISearchBarDelegate {
                 }
             }
         }
+        
+        searchBar.resignFirstResponder()
     }
     
 }
