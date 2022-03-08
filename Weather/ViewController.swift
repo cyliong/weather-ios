@@ -39,7 +39,11 @@ extension ViewController: UISearchBarDelegate {
         }
         
         WeatherService().getWeather(cityName: city) { weather in
-            print(weather ?? "Unable to load weather data.")
+            DispatchQueue.main.async {
+                if let weather = weather {
+                    self.emptyDataLabel.isHidden = true
+                }
+            }
         }
     }
     
