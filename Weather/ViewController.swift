@@ -38,8 +38,12 @@ extension ViewController: UISearchBarDelegate {
             return
         }
         
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
         WeatherService().getWeather(cityName: city) { weather in
             DispatchQueue.main.async {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                
                 if let weather = weather {
                     self.emptyDataLabel.isHidden = true
                     
