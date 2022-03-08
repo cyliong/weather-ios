@@ -38,6 +38,9 @@ extension ViewController: UISearchBarDelegate {
             return
         }
         
+        WeatherService().getWeather(cityName: city) { weather in
+            print(weather ?? "Unable to load weather data.")
+        }
     }
     
 }
