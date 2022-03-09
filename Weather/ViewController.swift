@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet private var conditionLabel: UILabel!
     @IBOutlet private var humidityLabel: UILabel!
     
+    private let weatherService = WeatherService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,7 +42,7 @@ extension ViewController: UISearchBarDelegate {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        WeatherService().getWeather(cityName: city) { weather in
+        weatherService.getWeather(cityName: city) { weather in
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 
