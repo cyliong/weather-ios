@@ -11,7 +11,7 @@ class WeatherService {
     ) {
         let url = getWeatherURL(cityName: cityName)!
         let task = URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
+            [weak self] (data, response, error) in
             
             let weather: Weather?
             if let data = data,
@@ -19,7 +19,7 @@ class WeatherService {
                let httpResponse = response as? HTTPURLResponse,
                (200...299).contains(httpResponse.statusCode)
             {
-                weather = self.deserializeJSON(data: data)
+                weather = self?.deserializeJSON(data: data)
             } else {
                 weather = nil
             }
