@@ -5,6 +5,8 @@ class WeatherService {
     private static let serviceURL =
         "https://api.openweathermap.org/data/2.5/weather?appid=\(apiKey)&units=metric"
     
+    private typealias JSONDictionary = [String: Any]
+    
     func getWeather(
         cityName: String,
         completionHandler: @escaping (Weather?) -> Void
@@ -33,16 +35,16 @@ class WeatherService {
             let jsonDictionary = try? JSONSerialization.jsonObject(
                 with: data,
                 options: []
-            ) as? [String: Any],
-            let mainDictionary = jsonDictionary["main"] as? [String: Any],
+            ) as? JSONDictionary,
+            let mainDictionary = jsonDictionary["main"] as? JSONDictionary,
             let temperature = mainDictionary["temp"] as? Double,
             let humidity = mainDictionary["humidity"] as? Int,
             let weatherDictionary = (
-                jsonDictionary["weather"] as? [[String: Any]]
+                jsonDictionary["weather"] as? [JSONDictionary]
             )?.first,
             let condition = weatherDictionary["main"] as? String,
             let city = jsonDictionary["name"] as? String,
-            let systemDictionary = jsonDictionary["sys"] as? [String: Any],
+            let systemDictionary = jsonDictionary["sys"] as? JSONDictionary,
             let countryCode = systemDictionary["country"] as? String
         else {
             return nil
