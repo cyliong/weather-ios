@@ -7,7 +7,7 @@ More information will be provided when it is ready.*
 - Display the city's weather condition
 
 ## Requirements
-- Xcode 13.2.1 or higher
+- Xcode 13.3 or higher
 - iOS 10.0 or higher
 - Swift 5 or higher
 
