@@ -14,7 +14,8 @@ class WeatherService {
         completionHandler: @escaping (Weather?) -> Void
     ) {
         let url = getWeatherURL(cityName: cityName)!
-        let task = URLSession.shared.dataTask(with: url) {
+        
+        URLSession.shared.dataTask(with: url) {
             [weak self] (data, response, error) in
             
             let weather: Weather?
@@ -29,7 +30,7 @@ class WeatherService {
             }
             completionHandler(weather)
         }
-        task.resume()
+        .resume()
     }
     
     private func deserializeJSON(data: Data) -> Weather? {
