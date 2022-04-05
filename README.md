@@ -1,6 +1,12 @@
 # weather-ios
-*This project is a work in progress.
-More information will be provided when it is ready.*
+This is a simple weather app built with UIKit, 
+showcasing various iOS programming techniques, including:
+- Asynchronous network requests using `URLSession`
+- Deserialize JSON response using `JSONSerialization`
+- Update main thread using `DispatchQueue.main`
+- Layouts with `UIStackView` and `UISearchBar`
+- Type aliases
+- Singleton design pattern
 
 ## Features
 - Search by city name
